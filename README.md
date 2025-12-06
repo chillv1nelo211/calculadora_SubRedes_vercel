@@ -1,16 +1,25 @@
-# React + Vite
+#  Calculadora de Subredes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta aplicación te permite **convertir direcciones IPv4 a IPv6 y viceversa**, además de **calcular subredes** de manera rápida, sencilla y con una interfaz moderna.  
+Gracias a las validaciones integradas, podrás trabajar con direcciones IP de forma confiable y obtener resultados precisos.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Características
 
-## React Compiler
+-  Conversión entre **IPv4 ↔ IPv6**
+- Cálculo automático de **subredes**
+- Validación inteligente de direcciones IP
+-  Interfaz moderna y fácil de usar
+-  Procesamiento instantáneo en navegador (sin backend)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+##  Instalación y ejecución
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Asegúrate de tener **Node.js** instalado.  
+Luego, ejecuta el proyecto en modo desarrollo:
+
+```bash
+npm install
+npm run dev
