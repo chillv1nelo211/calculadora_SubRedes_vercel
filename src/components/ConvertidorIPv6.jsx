@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import AnimatedContent from "../animation/botonAnimation";
-import { ipv6ToIpv4 } from "../logica/ipv6ToIpv4";
+import { ipv6ToIpv4 } from "../logica/ipv6toipv4";
 
 export const ConvertidorIPv6 = ({ onBack }) => {
   const [ip, setIp] = useState("");
@@ -8,11 +8,9 @@ export const ConvertidorIPv6 = ({ onBack }) => {
   const [result, setResult] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
 
-  // -------------------------
-  // 🔍 VALIDACIÓN IPv6
-  // -------------------------
+ 
   const validarIpv6 = (ipv6) => {
-    // IPv4 embebido: ::ffff:192.168.1.1
+    
     const ipv4Regex =
       /^((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)$/;
 
@@ -23,10 +21,10 @@ export const ConvertidorIPv6 = ({ onBack }) => {
       ipv6 = partes.join(":");
     }
 
-    // No puede haber más de un ::
+    
     if (ipv6.split("::").length > 2) return false;
 
-    // Grupos
+    
     const grupos = ipv6.split(":");
 
     if (ipv6.includes("::")) {
@@ -38,7 +36,7 @@ export const ConvertidorIPv6 = ({ onBack }) => {
       if (grupos.length !== 8) return false;
     }
 
-    // Validación de cada grupo IPv6
+    
     for (let grupo of grupos) {
       if (grupo === "") continue;
       if (!/^[0-9a-fA-F]{1,4}$/.test(grupo)) return false;

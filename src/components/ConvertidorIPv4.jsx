@@ -20,7 +20,7 @@ export const ConvertidorIPv4 = ({ onBack }) => {
     }
   }, [ip]);
 
-  // valirdaIp
+ 
   const validarIp = (ip) => {
     const partes = ip.split(".");
 
@@ -37,7 +37,7 @@ export const ConvertidorIPv4 = ({ onBack }) => {
     return true;
   };
 
-  // valirdaIp
+ 
 
   const handlerInputIp = (e) => {
     const valorIp = e.target.value;
@@ -48,7 +48,7 @@ export const ConvertidorIPv4 = ({ onBack }) => {
     if (ip && errorIp === false) {
       const conversion = ipv4ToIpv6(ip);
 
-      // Detecta si la función devolvió un mensaje de error
+     
       if (conversion.startsWith("Error")) {
         setErrorMsg(conversion);
         setResult("");
